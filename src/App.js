@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import CameraFeed from "./components/CameraFeed";
+import AttendanceTable from "./components/AttendanceTable";
+import "./styles/styles.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="camera-section">
+        <h2 className="camera-title">Live Camera</h2>
+        <CameraFeed />
+      </div>
+      <div className="attendance-section">
+        <AttendanceTable />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
